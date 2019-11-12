@@ -3,6 +3,7 @@
 </div>
 
 <%= form_for(@user) do |f|%>
+<div class="container">
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name,class: 'form-control'%>
@@ -20,4 +21,5 @@
     <%= f.password_field :password_confirmation, class: 'form-control'%>
   </div>
   <%= f.submit "Update", class:'btn btn-primary btn-block'%>
+</div>
 <% end %>
