@@ -16,54 +16,59 @@
  */
 
  body {
-    background: url(/assets/momi.jpg);
-    background-size: cover;
+	background: url(/assets/momi.jpg);
+	background-size: cover;
  }
  .footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: red;
-   color: white;
-   text-align: center;
-   margin-top: 2rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+	margin-top: 2rem;
 }
 .container{
-   text-align: center;
-   padding: 30px 0px
+	text-align: center;
+	padding: 30px 0px
 }
 .learn{
-   padding-top: 10px;
-   margin-top: 170px;
-   font-size: 50px;
-   color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
-   border-radius: 1px;
-   text-decoration: none;
-   width: 150px; 
-   height: 150px; 
-   padding: 40px 10px; 
-   border-radius: 150px; 
-   font-size: 40px; 
-   text-align: center;
+	padding-top: 5px;
+	margin-top: 150px;
+	font-size: 50px;
+	color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+	border-radius: 1px;
+	text-decoration: none;
+	width: 150px; 
+	height: 150px; 
+	padding: 40px 10px; 
+	border-radius: 150px; 
+	font-size: 40px; 
+	text-align: center;
 
 }
 .costom-margin{
-   margin-bottom: 35px;
+	margin-bottom: 35px;
 }
 // .btn:hover{
 //    color: yellow;
 //    background-color: white;
 // }
 p{
-   margin-top: 0px;
-   font-size: 70px;
-   font-family: 'Shadows Into Light', cursive;
+	margin-top: 60px;
+	font-size: 70px;
+	font-family: 'Shadows Into Light', cursive;
 }
 .create{
-   margin-top: 25px;
-   color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+  color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
 }
 .container{
-   padding:0px 80px;
+  padding:0px 80px;
+}
+.paginate {
+  margin: 0px 1rem;
+}
+.row{
+  margin: 2rem 1rem;
 }
