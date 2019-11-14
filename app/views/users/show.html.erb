@@ -1,0 +1,19 @@
+<div class="row mt-4">
+    <div class="col-3 text-center">
+       <div class="media-body userprofile ml-3">
+        	<%= gravatar_for @user %>
+        	<h4><%= @user.name%></h4>
+        	<h5><%= @user.email%></h5>
+    	</div>	
+    </div>
+    <div class="col-9">
+       <div class="card  activity">
+            <div class="card-header">
+                Activities
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
