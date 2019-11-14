@@ -4,7 +4,31 @@
         	<%= gravatar_for @user %>
         	<h4><%= @user.name%></h4>
         	<h5><%= @user.email%></h5>
-    	</div>	
+			<% if current_user != @user %>
+                <% unless current_user.following?(@user)%>
+                    <%= form_for(current_user.active_relationships.build) do |f| %>
+                        <div><%= hidden_field_tag :followed_id,@user.id %></div>
+                        <%= f.submit "Follow", class:"btn btn-primary"%>
+            		<% end %>
+            <% else %>
+                    <%= form_for(current_user.active_relationships.find_by(followed_id: @user.id),
+                        html:{method: :delete}) do |f|%>
+                        <%= f.submit "Unfollow",class: "btn btn-secondary"%>
+                    <% end %>
+                <% end %>
+            <% end %>
+    	</div>
+    <div class="col-12 text center">
+        <div class="row">
+            <div class="col-6">
+                <h3><%=@user.active_relationships.count%></h3>
+                following
+            </div>
+            <div class="col-6">
+                <h3><%=@user.passive_relationships.count%></h3>
+                followers
+            </div>
+        </div>
     </div>
     <div class="col-9">
        <div class="card  activity">
@@ -14,6 +38,3 @@
         </div>
     </div>
 </div>
-
-
-
