@@ -15,11 +15,11 @@
  *= require_self
  */
 
- body {
+body {
 	background: url(/assets/momi.jpg);
 	background-size: cover;
- }
- .footer {
+}
+.footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -46,7 +46,6 @@
 	border-radius: 150px; 
 	font-size: 40px; 
 	text-align: center;
-
 }
 .costom-margin{
 	margin-bottom: 35px;
@@ -58,11 +57,11 @@ p{
 	font-family: 'Shadows Into Light', cursive;
 }
 .create{
-  color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+	color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
 }
- 
+
 .paginate {
-  margin: 0px 1rem;
+	margin: 0px 1rem;
 }
 .userprofile{
 	padding-top: 7rem;
@@ -70,4 +69,7 @@ p{
 .activity{
 	margin-top: 1rem;
 	background-color: rgba($color: red, $alpha: 0.1);
+}
+.follow{
+	float: left;
 }
