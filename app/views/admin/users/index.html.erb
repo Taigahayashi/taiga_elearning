@@ -12,8 +12,13 @@
                 <div class="media-body">
                     <h5 class="pt-2 font-weight-bold"><%= link_to user.name, user %> </h5>
                 </div>
-                <%= link_to 'Delete',admin_users_path,class:"btn btn-outline-danger btn-sm float-r",
-                method: :delete %>
+                <% if user.admin? %>
+                    <%= link_to 'Delete',admin_user_path(user),method: :delete,
+                    class:"btn btn-outline-danger btn-sm float-r" %>    
+                <% else %>
+                    <%= link_to 'add',admin_user_path(user),method: :patch,
+                    class:"btn btn-outline-success btn-sm float-r add_botton"%>
+                <% end %>
             </div>
         </div>
     <% end %>
