@@ -1,6 +1,6 @@
 <h1 class="text-center mb-3">Users</h1>
 
-<div class="paginate">
+<div class="paginate text-center">
     <%= will_paginate %>
 </div>
 
@@ -12,7 +12,8 @@
                 <div class="media-body">
                     <h5 class="pt-2 font-weight-bold"><%= link_to user.name, user %> </h5>
                 </div>
-                
+                <%= link_to 'Delete',admin_users_path,class:"btn btn-outline-danger btn-sm float-r",
+                method: :delete %>
             </div>
         </div>
     <% end %>
