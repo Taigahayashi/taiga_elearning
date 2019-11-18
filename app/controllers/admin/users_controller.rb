@@ -9,9 +9,14 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    flash[:info] = "Successflly Removed user"
-    @user.destroy
-    redirect_to admin_category_url
+    @user.update(admin: false)
+    redirect_to admin_users_url
+	end
+	
+	def update
+		@user = User.find(params[:id])
+    @user.update(admin: true)
+    redirect_to admin_users_url
   end
     
 		
