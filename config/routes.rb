@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get'/home', to:'users#home'
     resources :users
-    get '/category',to:'users#category'
+    resources :categories
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
