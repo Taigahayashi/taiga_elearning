@@ -1,0 +1,20 @@
+<div class="category_top">
+    <h1>New Category</h1>
+</div>
+<%= form_for [:admin,@category] do |f|%>
+    <div class="custom-new-padding">
+        <%= render 'shared/error_messages',object: f.object %>
+        <div class="form-group">
+            <%= f.label :title %>
+            <div class="text">
+                <%= f.text_field :title,class: 'form-control'%>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_area :description, class: 'form-control'%>
+        </div>
+        <%= f.submit "Create a new category", class: 'btn btn-outline-danger btn-block create create_botton category-btn'%>
+    </div>
+<% end %>
