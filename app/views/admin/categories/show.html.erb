@@ -1,0 +1,18 @@
+<div class="category_top">
+    <h1>Words</h1>
+    <%= link_to "new word","#",class: "btn btn-outline-danger category_margin category_new" %>
+</div>
+<div class="table_margin">
+    <table class="table">
+        <thead>
+    		<tr>
+      			<th scope="col">Word</th>
+      			<th scope="col">answer</th>
+      			<th scope="col">Settings</th>
+    		</tr>
+  		</thead>
+	</table>
+	<div class="paginate text-center">
+    	<%= will_paginate %>
+	</div>
+</div>
