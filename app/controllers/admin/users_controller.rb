@@ -18,7 +18,6 @@ class Admin::UsersController < ApplicationController
     @user.update(admin: true)
     redirect_to admin_users_url
   end
-    
 		
   private
     def user_params
