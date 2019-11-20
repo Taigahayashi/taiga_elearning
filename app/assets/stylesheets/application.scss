@@ -129,3 +129,16 @@ p{
 .category-btn{
 	margin-top: 4rem;
 }
+.title_color{
+	font-family: 'Megrim', serif;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .4s;
+	color:rgba($color: rgb(255, 0, 0), $alpha: 0.7);
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 20px;
+}
+.title_color:hover{
+	text-decoration: none;
+	color:rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+}
