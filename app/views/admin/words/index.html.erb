@@ -16,7 +16,8 @@
     			<tr>
 					<td><%= word.content%></td>
 					<td><%= word.correct_answer%></td>
-                    <td></td>
+                    <td><%= link_to 'edit',edit_admin_category_word_path(@category,word),class:"btn btn-outline-success btn-sm float-r" %> /
+                    <%= link_to 'Delete',[:admin, @category, word],method: :delete,class:"btn btn-outline-danger btn-sm float-r" %></td>
     			</tr>
   			</tbody>
 		<% end %>
