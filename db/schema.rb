@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_033601) do
+ActiveRecord::Schema.define(version: 2019_11_21_014610) do
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "choices", force: :cascade do |t|
+    t.integer "word_id"
+    t.string "content"
+    t.boolean "isCorrect", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +50,10 @@ ActiveRecord::Schema.define(version: 2019_11_20_033601) do
   end
 
   create_table "words", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
