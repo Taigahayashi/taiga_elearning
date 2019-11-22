@@ -17,7 +17,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.paginate(page: params[:page],per_page: 10)
+    @category = Category.find(params[:id])
   end
 
 	def edit

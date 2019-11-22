@@ -142,3 +142,12 @@ p{
 	text-decoration: none;
 	color:rgba($color: rgb(255, 0, 0), $alpha: 0.4);
 }
+.form-group{
+	text-align: left;
+}
+.word-btn{
+	margin-bottom: 5rem;
+}
+.page-item.active .page-link{
+	z-index: -1;
+}

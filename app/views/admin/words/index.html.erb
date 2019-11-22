@@ -1,0 +1,27 @@
+<div class="category_top">
+    <h1>Words</h1>
+    <%= link_to "new word",new_admin_category_word_path,class: "btn btn-outline-danger category_margin category_new" %>
+</div>
+<div class="table_margin">
+    <table class="table">
+        <thead>
+    		<tr>
+      			<th scope="col">Word</th>
+      			<th scope="col">answer</th>
+      			<th scope="col">Settings</th>
+    		</tr>
+  		</thead>
+        <% @words.each do |word| %>
+  			<tbody>
+    			<tr>
+					<td><%= word.content%></td>
+					<td><%= word.correct_answer%></td>
+                    <td></td>
+    			</tr>
+  			</tbody>
+		<% end %>
+	</table>
+    <div class="paginate text-center">
+        <%= will_paginate %>
+    </div>
+</div>
