@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :users
   resources :relationships,only:[:create,:destroy]
+  resources :categories
   namespace :admin do
     get'/home', to:'users#home'
     resources :users
