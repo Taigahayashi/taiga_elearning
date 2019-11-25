@@ -1,0 +1,23 @@
+<div class="category_top">
+    <h1>Words</h1>
+</div> 
+<div class="lesson_body">
+    <div class="row">
+        <% @categories.each do |category| %>
+            <div class="col-sm-6">
+                <div class="card card-setting">
+                    <div class="card-body">
+                        <%= category.title %>
+                        <hr>    
+                        <%= category.description%>
+                        <br>
+                        <a href="#" class="btn btn-danger check_result_btn">Check result</a>
+                    </div>  
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<div class="paginate text-center lessons_paginate">
+    <%= will_paginate %>
+</div>
