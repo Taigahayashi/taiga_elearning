@@ -1,212 +1,212 @@
 @import "bootstrap";
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 
 body {
-	background: url(/assets/momi.jpg);
-	background-size: cover;
+  background: url(/assets/momi.jpg);
+  background-size: cover;
 }
 .footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: red;
-	color: white;
-	text-align: center;
-	margin-top: 2rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
 }
 .home-layout{
-	text-align: center;
-	padding: 30px 0px
+  text-align: center;
+  padding: 30px 0px
 }
 .learn{
-	padding-top: 5px;
-	margin-top: 150px;
-	font-size: 50px;
-	color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
-	border-radius: 1px;
-	text-decoration: none;
-	width: 150px; 
-	height: 150px; 
-	padding: 40px 10px; 
-	border-radius: 150px; 
-	font-size: 40px; 
-	text-align: center;
+  padding-top: 5px;
+  margin-top: 150px;
+  font-size: 50px;
+  color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+  border-radius: 1px;
+  text-decoration: none;
+  width: 150px; 
+  height: 150px; 
+  padding: 40px 10px; 
+  border-radius: 150px; 
+  font-size: 40px; 
+  text-align: center;
 }
 .costom-margin{
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
 
 p{
-	margin-top: 60px;
-	font-size: 70px;
-	font-family: 'Shadows Into Light', cursive;
+  margin-top: 60px;
+  font-size: 70px;
+  font-family: 'Shadows Into Light', cursive;
 }
 .create{
-	color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+  color: rgba($color: rgb(255, 0, 0), $alpha: 0.4);
 }
 
 .paginate {
-	margin: 0px 1rem;
+  margin: 0px 1rem;
 }
 .userprofile{
-	padding-top: 7rem;
+  padding-top: 7rem;
 }
 .activity{
-	margin-top: 1rem;
-	background-color: rgba($color: red, $alpha: 0.1);
+  margin-top: 1rem;
+  background-color: rgba($color: red, $alpha: 0.1);
 }
 .follow{
-	float: left;
+  float: left;
 }
 .button{
-	text-align: center;
-	padding-top: 50px;
-	font-size: 20px;
-	font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 20px;
+  font-family: 'Shadows Into Light', cursive;
 }
 .admintext{
-	text-align: center;
-	padding: 50px 0px;
-	font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  padding: 50px 0px;
+  font-family: 'Shadows Into Light', cursive;
 }
 .users_botton{
-	margin-bottom: 120px;
+  margin-bottom: 120px;
 }
 .custom-padding{
-	padding: 1rem 3rem 4rem 3rem;
+  padding: 1rem 3rem 4rem 3rem;
 }
 .bottom{
-	margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 .users_botton_margin{
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .category_margin{
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 .add_botton{
-	margin-right: 10px;
+  margin-right: 10px;
 }
 .category_top{
-	text-align: center;
-	margin-top: 3rem;
-	font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: 'Shadows Into Light', cursive;
 }
 .category_new{
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .table{
-	font-family: 'Shadows Into Light', cursive;
+  font-family: 'Shadows Into Light', cursive;
 }
 .table_margin{
-	margin: 1rem 14rem 5rem 14rem;
+  margin: 1rem 14rem 5rem 14rem;
 }
 .create_botton{
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
 .custom-new-padding{
-	padding: 4rem 15rem 8rem 15rem;
+  padding: 4rem 15rem 8rem 15rem;
 }
 .text{
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .category-btn{
-	margin-top: 4rem;
+  margin-top: 4rem;
 }
 .title_color{
-	font-family: 'Megrim', serif;
+  font-family: 'Megrim', serif;
   font-weight: bold;
   text-decoration: none;
   transition: .4s;
-	color:rgba($color: rgb(255, 0, 0), $alpha: 0.7);
-	font-family: 'Shadows Into Light', cursive;
-	font-size: 20px;
+  color:rgba($color: rgb(255, 0, 0), $alpha: 0.7);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
 }
 .title_color:hover{
-	text-decoration: none;
-	color:rgba($color: rgb(255, 0, 0), $alpha: 0.4);
+  text-decoration: none;
+  color:rgba($color: rgb(255, 0, 0), $alpha: 0.4);
 }
 .form-group{
-	text-align: left;
+  text-align: left;
 }
 .word-btn{
-	margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 .page-item.active .page-link{
-	z-index: -1;
+  z-index: -1;
 }
 .check_result_btn{
-	text-align: left;
-	margin-left: 14rem;
-	margin-bottom: 2rem;
-	background-color: rgba($color: red, $alpha: 0.6);
+  text-align: left;
+  margin-left: 14rem;
+  margin-bottom: 2rem;
+  background-color: rgba($color: red, $alpha: 0.6);
 }
 .card-setting{
-	margin: 1rem;
-	height: 150px;
-	border-radius: 30px;
+  margin: 1rem;
+  height: 150px;
+  border-radius: 30px;
 }
 .lessons_paginate{
-	margin: 0 25rem 5rem 25rem;
+  margin: 0 25rem 5rem 25rem;
 }
 .lesson_body{
-	margin: 2rem 7rem;
-	font-family: 'Shadows Into Light', cursive;
+  margin: 2rem 7rem;
+  font-family: 'Shadows Into Light', cursive;
 }
 .start-btn{
-	margin-left: 14rem;
-	height: 2rem;
-	width: 7rem;
+  margin-left: 14rem;
+  height: 2rem;
+  width: 7rem;
 }
 .result-btn{
-	margin-left: 13rem;
-	height: 36px;
-	width: 8rem;
+  margin-left: 13rem;
+  height: 36px;
+  width: 8rem;
 }
 .category_title{
-	text-align: center;
-	position: relative;
-	top: 200px;
-	right: 100px;
-	font-size: 60px;
-	font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  position: relative;
+  top: 200px;
+  right: 100px;
+  font-size: 60px;
+  font-family: 'Shadows Into Light', cursive;
 }
 .choices_btn{
-	margin: 1rem 18rem 0rem 27rem;
-	font-family: 'Shadows Into Light', cursive;
-	font-size: 40px;
-	
+  margin: 1rem 18rem 0rem 27rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
+
 }
 .count{
-	margin-top: 20px;
-	font-family: 'Shadows Into Light', cursive;
+  margin-top: 20px;
+  font-family: 'Shadows Into Light', cursive;
 }
 .btn_setting{
-	margin: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 }
 .word-content{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .btn-follow{
-	width: 200px;
-	height: 50px;
-	position: relative;
-	left: 28px;
-	margin-top: 10px;
+  width: 200px;
+  height: 50px;
+  position: relative;
+  left: 28px;
+  margin-top: 10px;
 }
