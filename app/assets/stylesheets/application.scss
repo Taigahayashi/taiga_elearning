@@ -163,9 +163,50 @@ p{
 	border-radius: 30px;
 }
 .lessons_paginate{
-	margin-bottom: 5rem;
+	margin: 0 25rem 5rem 25rem;
 }
 .lesson_body{
 	margin: 2rem 7rem;
 	font-family: 'Shadows Into Light', cursive;
+}
+.start-btn{
+	margin-left: 14rem;
+	height: 2rem;
+	width: 7rem;
+}
+.result-btn{
+	margin-left: 13rem;
+	height: 36px;
+	width: 8rem;
+}
+.category_title{
+	text-align: center;
+	position: relative;
+	top: 200px;
+	right: 100px;
+	font-size: 60px;
+	font-family: 'Shadows Into Light', cursive;
+}
+.choices_btn{
+	margin: 1rem 18rem 0rem 27rem;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 40px;
+	
+}
+.count{
+	margin-top: 20px;
+	font-family: 'Shadows Into Light', cursive;
+}
+.btn_setting{
+	margin: 20px 0px 20px 0px;
+}
+.word-content{
+	margin-bottom: 20px;
+}
+.btn-follow{
+	width: 200px;
+	height: 50px;
+	position: relative;
+	left: 28px;
+	margin-top: 10px;
 }

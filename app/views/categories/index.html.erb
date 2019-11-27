@@ -11,8 +11,14 @@
                         <hr>    
                         <%= category.description%>
                         <br>
-                        <a href="#" class="btn btn-danger check_result_btn">Check result</a>
-                    </div>  
+                        <% lesson =current_user.lesson_taken(category.id) %>
+
+                        <% if lesson.nil?%>
+                            <%=link_to "Start lesson", lessons_path(category_id: category.id),method: :post,class:"btn btn-outline-danger btn-sm start-btn" %>
+                        <% else %>
+                            <%=link_to "Show result", "#", class:"btn btn-outline-primary result-btn"%>
+                        <% end %>
+                    </div>
                 </div>
             </div>
         <% end %>

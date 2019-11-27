@@ -22,6 +22,8 @@ class User < ApplicationRecord
 
   has_many :following,through: :active_relationships, source: :followed
   has_many :followers,through: :active_relationships, source: :follower
+  has_many :lessons,dependent: :destroy
+  
 
   #follow a user
 	def follow(other_user)
@@ -35,5 +37,9 @@ class User < ApplicationRecord
 	#returns ture if the current user is following the other user.
 	def following? (other_user)
 		following.include?(other_user)
-	end
+  end
+  
+  def lesson_taken(category_id)
+    lesson = lessons.find_by(category_id: category_id)
+  end
 end

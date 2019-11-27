@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :users
   resources :relationships,only:[:create,:destroy]
   resources :categories
+
+  resources :lessons,only:[:create, :show] do
+    resources :answers
+  end
+  
   namespace :admin do
     get'/home', to:'users#home'
     resources :users
