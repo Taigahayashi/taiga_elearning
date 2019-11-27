@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_001251) do
+ActiveRecord::Schema.define(version: 2019_11_25_032624) do
+
+  create_table "answers", force: :cascade do |t|
+    t.integer "lesson_id"
+    t.integer "word_id"
+    t.integer "choice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["choice_id"], name: "index_answers_on_choice_id"
+    t.index ["lesson_id"], name: "index_answers_on_lesson_id"
+    t.index ["word_id"], name: "index_answers_on_word_id"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
@@ -28,8 +39,13 @@ ActiveRecord::Schema.define(version: 2019_11_25_001251) do
   end
 
   create_table "lessons", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "category_id"
+    t.integer "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_lessons_on_category_id"
+    t.index ["user_id"], name: "index_lessons_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|

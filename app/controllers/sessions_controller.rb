@@ -14,10 +14,10 @@ class SessionsController < ApplicationController
       flash[:danger] = "Invaild Credentions"
     end
   end
+  
   def destroy
     log_out
     flash[:info] = "Successflly logged out"
     redirect_to root_url
   end
-  
 end

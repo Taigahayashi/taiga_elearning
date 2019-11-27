@@ -1,0 +1,26 @@
+<div class="container mr-4">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="row">
+                <div class="category_title">
+                    <h1><%= @category.title %></h1>
+                    <div class="count">
+                        <h3 class="text-center"><%= @lesson.words.count +1 %>of<%= @category.words.count%></h3>
+                    </div>
+                </div>
+                <div class="choices_btn">
+                    <h1 class="text-center word-content"><strong><%=@lesson.next_word.content %></h1>
+                    <div class="form-group">
+                        <% @lesson.next_word.choices.each do |choice| %>
+                            <%= form_for([@lesson,@answer]) do |f| %>
+                                <%= f.hidden_field :word_id, value: choice.word_id %>
+                                <%= f.hidden_field :choice_id, value: choice.id %>
+                                <%= f.submit choice.content,class:"form-control btn btn-outline-success btn-lg mt-2 btn_setting" %>
+                            <% end %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
