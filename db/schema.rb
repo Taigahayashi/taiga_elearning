@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_032624) do
+ActiveRecord::Schema.define(version: 2019_11_27_032111) do
+
+  create_table "activities", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "action_id"
+    t.string "action_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_activities_on_user_id"
+  end
 
   create_table "answers", force: :cascade do |t|
     t.integer "lesson_id"
@@ -57,6 +66,11 @@ ActiveRecord::Schema.define(version: 2019_11_25_032624) do
   end
 
   create_table "sessions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "staticpages", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

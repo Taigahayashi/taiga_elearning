@@ -14,7 +14,7 @@
                         <% lesson =current_user.lesson_taken(category.id) %>
 
                         <% if lesson.nil?%>
-                            <%=link_to "Start lesson", lessons_path(category_id: category.id),method: :post,class:"btn btn-outline-danger btn-sm start-btn" %>
+                            <%=link_to "Start lesson", lessons_path(category_id: category.id),class:"btn btn-outline-danger btn-sm start-btn",method: :post %>
                         <% else %>
                             <%=link_to "Show result", "#", class:"btn btn-outline-primary result-btn"%>
                         <% end %>
