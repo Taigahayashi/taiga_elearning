@@ -11,11 +11,11 @@
                 <div class="choices_btn">
                     <h1 class="text-center word-content"><strong><%=@lesson.next_word.content %></h1>
                     <div class="form-group">
-                        <% @lesson.next_word.choices.each do |choice| %>
-                            <%= form_for([@lesson,@answer]) do |f| %>
-                                <%= f.hidden_field :word_id, value: choice.word_id %>
-                                <%= f.hidden_field :choice_id, value: choice.id %>
-                                <%= f.submit choice.content,class:"form-control btn btn-outline-success btn-lg mt-2 btn_setting" %>
+                        <% @lesson.next_word.choices.each do |word| %>
+                            <%= form_for([:lesson,@lesson.answers.build]) do |f| %>
+                                <%= f.hidden_field :word_id, value: word.word_id %>
+                                <%= f.hidden_field :choice_id, value: word.id %>
+                                <%= f.submit word.content,class:"form-control btn btn-outline-success btn-lg mt-2 btn_setting" %>
                             <% end %>
                         <% end %>
                     </div>

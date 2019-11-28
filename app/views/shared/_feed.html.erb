@@ -1,0 +1,47 @@
+<% if @activities.any? %>
+
+<% else %>
+    <h3 class="text-muted text-center">Nothing to show</h3>
+<% end %>
+
+<% @activities.each do |activity| %>
+    <% if activity.action_type == "Lesson" %>
+        <div class="media setting_activity">
+            <% if activity.user == current_user %>
+                <%= gravatar_for(current_user) %>
+            <% else %>
+                <%= gravatar_for(activity.user) %>
+            <% end %>
+            <div class="media-body">  
+                <%= link_to_if activity.user == current_user, "You",user_path(current_user) do
+                link_to activity.user.name, user_path(activity.user.id) end %> learned
+                <%= activity.action.lesson_results %> of
+                <%= activity.action.words.size %> in
+                <%= link_to activity.action.category.title, "#" %>
+                <div>
+                    <small class="text-muted"><%= time_ago_in_words(activity.created_at) %> </small>
+                </div>
+            </div>
+        </div>
+    <% else %>
+        <div class="media">
+            <div class="media setting_activity">
+                <% if activity.user == current_user %>
+                    <%= gravatar_for(current_user) %>
+                <% else %>
+                    <%= gravatar_for(activity.user) %>
+                <% end %>
+                <div class="media-body">
+                    <%= link_to_if activity.user == current_user, "You", user_path(current_user) do 
+                    link_to activity.user.name, user_path(activity.user.id) end %> followed
+                    <%= link_to activity.action.followed.name,activity.action.followed %>
+                    <div>
+                        <small class="text-muted"><%= time_ago_in_words(activity.created__at) %></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
+
+    

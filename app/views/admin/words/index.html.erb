@@ -1,6 +1,6 @@
 <div class="category_top">
     <h1>Words</h1>
-    <%= link_to "new word",new_admin_category_word_path,class: "btn btn-outline-danger category_margin category_new" %>
+    <%= link_to "new word",new_admin_category_word_path(category_id:@category.id),class: "btn btn-outline-danger category_margin category_new" %>
 </div>
 <div class="table_margin">
     <table class="table">
@@ -14,10 +14,12 @@
         <% @words.each do |word| %>
   			<tbody>
     			<tr>
-					<td><%= word.content%></td>
-					<td><%= word.correct_answer%></td>
-                    <td><%= link_to 'edit',edit_admin_category_word_path(@category,word),class:"btn btn-outline-success btn-sm float-r" %> /
-                    <%= link_to 'Delete',[:admin, @category, word],method: :delete,class:"btn btn-outline-danger btn-sm float-r" %></td>
+					<td><%= word.content %></td>
+					<td><%= word.correct_answer %></td>
+                    <td>
+						<%= link_to 'edit',edit_admin_category_word_path(@category,word),class:"btn btn-outline-success btn-sm float-r" %> /
+						<%= link_to 'Delete',[:admin, @category, word],method: :delete,class:"btn btn-outline-danger btn-sm float-r" %>
+					</td>
     			</tr>
   			</tbody>
 		<% end %>
