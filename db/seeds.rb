@@ -20,7 +20,7 @@ User.create!(
   )
 end
 
-4.times do
+20.times do
   title = Faker::Games::Pokemon.unique.move
   description = Faker::Games::Pokemon.unique.location
   content = Faker::Creature::Animal.unique.name
@@ -30,9 +30,9 @@ end
     content: content,
     category_id: category.id,
     choices_attributes:[
-      { content: Faker::Lorem.unique.word, correct: false},
-      { content: Faker::Lorem.unique.word, correct: false},
-      { content: Faker::Lorem.unique.word, correct: true}
+      { content: Faker::Lorem.unique.word, isCorrect: false},
+      { content: Faker::Lorem.unique.word, isCorrect: false},
+      { content: Faker::Lorem.unique.word, isCorrect: true}
     ]
   )
 end
