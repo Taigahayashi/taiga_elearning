@@ -11,6 +11,9 @@ class AnswersController < ApplicationController
     end
   end
   
+  def show
+  end
+
   def create
     @lesson = Lesson.find(params[:lesson_id])
 

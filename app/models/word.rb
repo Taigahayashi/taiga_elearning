@@ -4,8 +4,8 @@ class Word < ApplicationRecord
   has_many :answer,dependent: :destroy
   validate :has_one_correct_answer
 	accepts_nested_attributes_for :choices
-	validates :choices, presence: true,length: {maximum:15}
-  validates :content, presence: true,length: {maximum:15}
+	validates :choices, presence: true
+  validates :content, presence: true
 	validate :has_unique_choice
 	
   def has_one_correct_answer

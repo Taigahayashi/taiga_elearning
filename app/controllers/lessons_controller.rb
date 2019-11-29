@@ -8,7 +8,7 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
-    @category = Category.find(@lesson.category_id)
+    @answers = @lesson.answers
   end
 
   private

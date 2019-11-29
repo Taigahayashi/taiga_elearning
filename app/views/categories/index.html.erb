@@ -1,13 +1,18 @@
 <div class="category_top">
-    <h1>Words</h1>
-</div> 
+    <h1>Categories</h1>
+</div>
+<div class="filter_btn">
+    <%=link_to"ALL",categories_path, class: "btn btn-outline-primary"%>
+    <%=link_to"Learned",categories_path(status: "1"), class: "btn btn-outline-info"%>
+    <%=link_to"Not Learned",categories_path(status: "0"), class: "btn btn-outline-secondary"%>
+</div>
 <div class="lesson_body">
     <div class="row">
         <% @categories.each do |category| %>
             <div class="col-sm-6">
                 <div class="card card-setting">
                     <div class="card-body">
-                        <%= category.title %>
+                        <%= category.title %> [<%= category.words.count%>]
                         <hr>    
                         <%= category.description%>
                         <br>
@@ -16,7 +21,7 @@
                         <% if lesson.nil?%>
                             <%=link_to "Start lesson", lessons_path(category_id: category.id),class:"btn btn-outline-danger btn-sm start-btn",method: :post %>
                         <% else %>
-                            <%=link_to "Show result", "#", class:"btn btn-outline-primary result-btn"%>
+                            <%=link_to "Show result", lesson_path(lesson.category.id), class:"btn btn-outline-primary result-btn"%>
                         <% end %>
                     </div>
                 </div>

@@ -14,9 +14,4 @@ class Lesson < ApplicationRecord
   def next_word
     (category.words - words).first
   end
-
-  def show
-    @lesson = Lesson.find(params[:id])
-    @answers = @lesson.answers
-  end
 end
