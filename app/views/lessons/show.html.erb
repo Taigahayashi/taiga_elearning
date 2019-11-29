@@ -4,28 +4,28 @@
 <div class="result_margin">
     <table class="table">
         <thead>
-    		<tr>
-      			<th scope="col">Word</th>
-      			<th scope="col">Your answer</th>
-				<th scope="col">Correct Answer</th>
-				<th scope="col">Result</th>
-    		</tr>
-  		</thead>
+            <tr>
+                <th scope="col">Word</th>
+                <th scope="col">Your answer</th>
+                <th scope="col">Correct Answer</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
         <% @answers.each do |answer| %>
-  			<tbody>
-    			<tr>
-					<td><%= answer.word.content %></td>
-					<td><%= answer.choice.content %></td>
-					<td><%= answer.word.correct_answer %></td>
-					<td>
-						<% if answer.choice.content == answer.word.correct_answer%>
-							<i class="far fa-circle"></i>
-						<% else %>
-							<i class="fas fa-times"></i>
-						<% end %>
-					</td>
-    			</tr>
-  			</tbody>
-		<% end %>
-	</table>
+            <tbody>
+                <tr>
+                    <td><%= answer.word.content %></td>
+                    <td><%= answer.choice.content %></td>
+                    <td><%= answer.word.correct_answer %></td>
+                    <td>
+                        <% if answer.choice.content == answer.word.correct_answer%>
+                            <i class="far fa-circle"></i>
+                        <% else %>
+                            <i class="fas fa-times"></i>
+                        <% end %>
+                    </td>
+                </tr>
+            </tbody>
+        <% end %>
+    </table>
 </div>
