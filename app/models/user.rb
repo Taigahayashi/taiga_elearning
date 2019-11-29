@@ -24,7 +24,7 @@ class User < ApplicationRecord
   has_many :followers,through: :active_relationships, source: :follower
   has_many :lessons,dependent: :destroy
   has_many :activities,dependent: :destroy
-
+  has_many :categories, through: :lessons
 
   #follow a user
   def follow(other_user)

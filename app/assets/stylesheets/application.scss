@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 /*
 * This is a manifest file that'll be compiled into application.css, which will include all the files
 * listed below.
@@ -18,6 +20,7 @@
 body {
   background: url(/assets/momi.jpg);
   background-size: cover;
+  font-family: 'Shadows Into Light', cursive;
 }
 .footer {
   position: fixed;
@@ -220,4 +223,14 @@ p{
 .dashboard_paginate{
   position: relative;
   left: 29px;
+}
+.filter_btn{
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  font-family: 'Shadows Into Light', cursive; 
+}
+.result_margin{
+  margin: 3rem 14rem 5rem 14rem;
 }

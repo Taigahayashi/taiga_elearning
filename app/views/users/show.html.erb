@@ -37,12 +37,15 @@
 
     </div>
     <div class="col-9">
-       <div class="card activity">
+       <div class="card activity feed_paginate">
             <div class="card-header">
                 Activities
             </div>
             <div class="card-body">
                 <%= render 'shared/feed' %>
+                <div class="dashboard_paginate">
+                    <%= will_paginate @activities%>
+                </div>
             </div>
         </div>
     </div>

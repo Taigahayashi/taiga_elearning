@@ -19,39 +19,30 @@ User.create!(
     password: "password"
   )
 end
+  
+25.times do |n|
+  title  = Faker::Lorem.word
+  des =  Faker::Lorem.word
 
-20.times do
-  title = Faker::Games::Pokemon.unique.move
-  description = Faker::Games::Pokemon.unique.location
-  content = Faker::Creature::Animal.unique.name
-  category =  Category.create!(title: title, description: description)
-
-  word = Word.create!(
-    content: content,
-    category_id: category.id,
-    choices_attributes:[
-      { content: Faker::Lorem.unique.word, isCorrect: false},
-      { content: Faker::Lorem.unique.word, isCorrect: false},
-      { content: Faker::Lorem.unique.word, isCorrect: true}
-    ]
-  )
+  Category.create!(title:  title,
+                  description: des)
 end
 
-# 20.times do |n|
-#   title = Faker::Games::Pokemon.name
-#   description =  "Lorem Epsum"
-#   Category.create!(title: title,description: description)
-# end
 
-# 10.times do
-#   content = Faker::Lorem.word
-#   word = Category.all.sample.words.build content: content
-#   word.choices = [
-#   Choice.new(content: content, isCorrect: true),
-#   Choice.new(content: Faker::Music.instrument, isCorrect: false),
-#   Choice.new(content: Faker::Music.chord, isCorrect: false)
-#   ].shuffle
-#   word.save(validate: false)
-# end
-  
-  
+20.times do |n|
+  title = Faker::Name.unique.name
+  description =  "Lorem Epsum"
+  Category.create!(title: title,description: description)
+
+  10.times do
+    content = Faker::Lorem.word
+    word = Category.all.sample.words.build content: content
+    word.choices = [
+      Choice.new(content: content, isCorrect: true),
+      Choice.new(content: Faker::Music.instrument, isCorrect: false),
+      Choice.new(content: Faker::Music.chord, isCorrect: false)
+    ].shuffle
+    word.save(validate: false)
+  end
+end
+
